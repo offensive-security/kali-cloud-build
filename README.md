@@ -58,7 +58,6 @@ your itch, you can of course [write your own plugin](https://github.com/offensiv
 
 * EBS volume is automatically created, mounted, formatted, unmounted, "snapshotted" and deleted
 * AMI is automatically registered with the right kernels for the current region of the host machine
-* Supports Debian squeeze and wheezy
-* Currently creates only 64-bit AMIs
+* Currently creates only Kali Linux 64-bit AMIs
 * Plugin system to keep the bootstrapping process automated
 * The process is divided into simple task based scripts
