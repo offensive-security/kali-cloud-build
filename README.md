@@ -1,24 +1,11 @@
-# Debian bootstrapping script for Amazon machine images and Google Compute Engine images #
+# Kali bootstrapping script for Amazon machine images and (soon) Google Compute Engine images #
 
-This script bootstraps a vanilla Debian installation to create either
+This script bootstraps a barebones Kali installation to create either
 an Amazon machine image or a Google Compute Engine image.
 The image contains no latent logfiles no .bash\_history or even the apt package cache.  
 The machine configuration this script creates has been thoroughly tested.
 
-*This script has been tested on Debian squeeze and wheezy.*
 *To create an AMI this bootstrapper needs to be run on an Amazon EC2 instance.*
-
-## Official AMIs provided by the Debian community and Amazon ##
-
-The Debian community and Amazon have together created AMIs using this bootstrapper
-and replicated them across AWS regions. The images have been tested for security and bugs.
-They are available on the [aws marketplace](https://aws.amazon.com/marketplace/pp/ref=csl_clsc_prd?sku=8fvdn95s5ev33cprr62nq3q7t).
-
-For each new official AMI a commit in this repository will be [tagged](https://github.com/andsens/build-debian-cloud/tags),
-marking the version the AMI was bootstrapped with.
-
-More information about these images and links to the gzipped volume images can be found on the
-[Debian wiki page](http://wiki.debian.org/Cloud/AmazonEC2Image/Squeeze) dedicated to those images.
 
 ## Usage ##
 
@@ -32,9 +19,12 @@ When creating an AMI the script at least needs to know your AWS credentials.
 There are no interactive prompts, the bootstrapping can run entirely unattended
 from start till finish.
 
-Some plugins are included in the [plugins directory](https://github.com/andsens/build-debian-cloud/tree/master/plugins).
+Some plugins are included in the [plugins directory](https://github.com/offensive-security/build-kali-cloud/tree/master/plugins).
 A list of external plugins is also provided there. If none of those scratch
-your itch, you can of course [write your own plugin](https://github.com/andsens/build-debian-cloud/blob/master/plugins/HOWTO.md).
+your itch, you can of course [write your own plugin](https://github.com/offensive-security/build-kali-cloud/blob/master/plugins/HOWTO.md).
+
+Example:
+  ``./build-debian-cloud ec2 --secret-key XXXXX --access-key XXXXX``
 
 ## Features ##
 
