@@ -45,7 +45,7 @@ imagedir=
 
 
 # Split between platforms: ec2 and gce
-platform_help="build-debian-cloud
+platform_help="kali-cloud-build
 This script creates a Debian Squeeze Image for
 either Amazon Web Services or Google Compute Engine.
 

@@ -13,9 +13,7 @@ The machine configuration this script creates has been thoroughly tested.
 <pre>
 $ cd ~
 $ sudo apt-get install git debootstrap
-$ cd /usr/share/debootstrap/scripts
-$ sudo ln -s wheezy kali
-$ cd ~
+$ sudo ln -sf /usr/share/debootstrap/scripts{wheezy,kali}
 $ git clone https://github.com/offensive-security/kali-cloud-build.git 
 $ cd kali-cloud-build
 $ sudo ./kali-cloud-build ec2 --secret-key xxxxxxxxxxxxx --access-key xxxxxxxxxxxxx
