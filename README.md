@@ -1,4 +1,4 @@
-# Kali bootstrapping script for Amazon Machine Images #
+# Kali bootstrapping script for Amazon Machine Images (AMI)#
 
 Forked from https://github.com/andsens/build-debian-cloud. This script bootstraps a barebones Kali installation to create either
 an Amazon machine image or a Google Compute Engine image.
