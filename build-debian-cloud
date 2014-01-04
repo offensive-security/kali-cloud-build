@@ -34,8 +34,8 @@ timezone='UTC'
 
 # Hardcoded params.
 # This script would explode if we had to take care of other distributions
-distribution='debian'
-codename='squeeze'
+distribution='kali'
+codename='kali'
 
 # Filesystem and image info
 filesystem='ext4'

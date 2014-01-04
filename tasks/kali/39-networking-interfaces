@@ -1,0 +1,6 @@
+#!/bin/bash
+# In wheezy, the loopback interface is already defined after bootstrapping
+cat >> $imagedir/etc/network/interfaces <<EOF
+auto eth0
+iface eth0 inet dhcp
+EOF
