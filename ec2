@@ -6,8 +6,8 @@ name_suffix=$(date +%Y%m%d)
 description=
 snapshot_id=
 volume_id=
-volume_size='1'
-apt_mirrors='http://http.debian.net/debian'
+volume_size='20'
+apt_mirrors='http://http.kali.org/kali'
 
 # EC2 known regions
 known_regions=('us-east-1')

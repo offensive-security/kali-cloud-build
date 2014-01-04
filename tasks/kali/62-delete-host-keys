@@ -1,0 +1,9 @@
+#!/bin/bash
+# Remove the ssh host keys, they need to be shredded
+shred --remove \
+	$imagedir/etc/ssh/ssh_host_dsa_key \
+	$imagedir/etc/ssh/ssh_host_dsa_key.pub \
+	$imagedir/etc/ssh/ssh_host_rsa_key \
+	$imagedir/etc/ssh/ssh_host_rsa_key.pub \
+	$imagedir/etc/ssh/ssh_host_ecdsa_key \
+	$imagedir/etc/ssh/ssh_host_ecdsa_key.pub

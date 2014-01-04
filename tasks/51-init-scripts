@@ -9,3 +9,6 @@ done
 
 # Inside Xen, CMOS clock is irrelevant, so save seconds at boot
 chroot $imagedir insserv -r hwclock.sh
+
+# Need to enable ssh to access the ec2 instance
+chroot $imagedir update-rc.d ssh enable

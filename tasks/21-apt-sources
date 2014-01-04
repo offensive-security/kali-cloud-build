@@ -5,12 +5,12 @@
 
 for apt_mirror in $apt_mirrors; do
 cat >> $imagedir/etc/apt/sources.list <<EOF
-deb     $apt_mirror $codename         main
-deb-src $apt_mirror $codename         main
+deb $apt_mirror $codename main contrib non-free
+deb-src $apt_mirror $codename main contrib non-free
 EOF
 done
 
 cat >> $imagedir/etc/apt/sources.list <<EOF
-deb     http://security.debian.org/   $codename/updates main
-deb-src http://security.debian.org/   $codename/updates main
+deb http://security.kali.org/kali-security kali/updates main contrib non-free
+deb-src http://security.kali.org/kali-security kali/updates main contrib non-free
 EOF
