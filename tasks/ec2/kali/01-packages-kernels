@@ -1,4 +1,4 @@
 #!/bin/bash
 # There are no special xen kernels in wheezy any longer
-#[ $arch = 'amd64' ] && packages+=('linux-image-amd64')
-#[ $arch = 'i386' ] && packages+=('linux-image-686')
+[ $arch = 'amd64' ] && packages+=('linux-image-amd64')
+[ $arch = 'i386' ] && packages+=('linux-image-686')
