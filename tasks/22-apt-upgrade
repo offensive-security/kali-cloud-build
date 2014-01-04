@@ -18,10 +18,3 @@ chroot $imagedir apt-get -f install -y
 # Upgrade existing packages
 chroot $imagedir apt-get -y upgrade | spin
 [ $PIPESTATUS == 0 ] || die "apt-get upgrade failed!"
-
-# Install the Kali kernel, and initramfs-tools to build initrd
-cp kernels/linux-image-3.7.2_3.7.2-10.00.Custom_$arch.deb $imagedir/root/
-chroot $imagedir dpkg -i /root/linux-image-3.7.2_3.7.2-10.00.Custom_$arch.deb
-chroot $imagedir apt-get install -f -y initramfs-tools
-chroot $imagedir update-initramfs -c -k 3.7.2
-chroot $imagedir rm /root/linux-image-3.7.2_3.7.2-10.00.Custom_$arch.deb
