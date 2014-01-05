@@ -7,8 +7,9 @@ gce_project=
 # Image details
 image_name_suffix=v$(date +%Y%m%d)
 build_date=$(date +%Y-%m-%d)
-volume_size='10'
-apt_mirrors='http://gce_debian_mirror.storage.googleapis.com/ http://http.debian.net/debian'
+volume_size='20'
+#apt_mirrors='http://gce_debian_mirror.storage.googleapis.com/ http://http.debian.net/debian'
+apt_mirrors='http://http.kali.org/kali'
 gce_kernel=projects/google/global/kernels/gce-v20130813
 
 # $description is set later if it has no value yet. This is
