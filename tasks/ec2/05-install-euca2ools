@@ -4,15 +4,15 @@
 # The package in squeeze is v 1.2, which does not support EBS images
 # So we install 1.3 from source instead
 if [ ! -d $scriptdir/euca2ools ]; then
-	wget -qO $scriptdir/euca2ools-1.3.2.tar.gz https://github.com/eucalyptus/euca2ools/archive/1.3.2.tar.gz
-	tar zxf $scriptdir/euca2ools-1.3.2.tar.gz
+	wget -qO $scriptdir/euca2ools-3.0.2.tar.gz https://github.com/eucalyptus/euca2ools/archive/3.0.2.tar.gz
+	tar zxf $scriptdir/euca2ools-3.0.2.tar.gz
 fi
 
 function install_euca2ools {
 	# We want to fail if make fails, so don't start a subshell with ()
 	# Remember the old dir
 	local orig_pwd=$(pwd)
-	cd euca2ools-1.3.2
+	cd euca2ools-3.0.2
 	make | spin
 	[ $PIPESTATUS == 0 ] || die "Bootstrapping failed!"
 	cd $orig_pwd
@@ -21,6 +21,6 @@ function install_euca2ools {
 # make the euca2ools if they are not installed or the version is wrong
 if ! command -v euca-version > /dev/null 2>&1; then
 	install_euca2ools
-elif [[ ! "`euca-version`" =~ euca2ools\ 1.3.* ]]; then
+elif [[ ! "`euca-version`" =~ euca2ools\ 3.* ]]; then
 	install_euca2ools
 fi
