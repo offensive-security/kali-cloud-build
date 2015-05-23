@@ -55,6 +55,7 @@ ami_id=`euca-register \
 	--name "$ami_name" --description "$description" \
 	--architecture "$ami_arch" --kernel "$aki" \
 	--snapshot "$snapshot_id" --root-device-name "/dev/sda" \
+	--virtualization-type "hvm" \
 	| awk '{print $2}'`
 
 # If the user has already created an unnamed AMI today,
@@ -66,6 +67,7 @@ if [[ ! "$ami_id" =~ ^ami-[0-9a-z]{8}$ ]]; then
 		"`which euca-register` \\\\" \
 		"--name '$ami_name' --description '$description' \\\\" \
 		"--architecture '$ami_arch' --kernel '$aki' \\\\" \
-		"--snapshot '$snapshot_id' --root-device-name '/dev/sda'"
+		"--snapshot '$snapshot_id' --root-device-name '/dev/sda' \\\\" \
+		"--virtualization-type 'hvm'"
 fi
 log "Your AMI has been created with the ID '$ami_id'"
