@@ -1,54 +1,9 @@
 #!/bin/bash
 # Register the snapshot as a new AMI
 
-# Figure out which pvGrub kernel ID we need
-#case $region in
-#	us-east-1)
-#		[ $arch = 'amd64' ] && aki="aki-919dcaf8"
-#		[ $arch = 'i386' ] && aki="aki-8f9dcae6"
-#	;;
-#	us-west-1)
-#		[ $arch = 'amd64' ] && aki="aki-880531cd"
-#		[ $arch = 'i386' ] && aki="aki-8e0531cb"
-#	;;
-#	us-west-2)
-#		[ $arch = 'amd64' ] && aki="aki-fc8f11cc"
-#		[ $arch = 'i386' ] && aki="aki-f08f11c0"
-#	;;
-#	eu-west-1)
-#		[ $arch = 'amd64' ] && aki="aki-52a34525"
-#		[ $arch = 'i386' ] && aki="aki-68a3451f"
-#	;;
-#	ap-southeast-1)
-#		[ $arch = 'amd64' ] && aki="aki-503e7402"
-#		[ $arch = 'i386' ] && aki="aki-ae3973fc"
-#	;;
-#	ap-southeast-2)
-#		[ $arch = 'amd64' ] && aki="aki-c362fff9"
-#		[ $arch = 'i386' ] && aki="aki-cd62fff7"
-#	;;
-#	ap-northeast-1)
-#		[ $arch = 'amd64' ] && aki="aki-176bf516"
-#		[ $arch = 'i386' ] && aki="aki-136bf512"
-#	;;
-#	sa-east-1)
-#		[ $arch = 'amd64' ] && aki="aki-5553f448"
-#		[ $arch = 'i386' ] && aki="aki-5b53f446"
-#	;;
-#	us-gov-west-1)
-#		[ $arch = 'amd64' ] && aki="aki-1de98d3e"
-#		[ $arch = 'i386' ] && aki="aki-1fe98d3c"
-#	;;
-#	*) die "Unrecognized region:" "$region"
-#esac
-
-
 [ $arch = 'i386' ] && ami_arch='i386'
 [ $arch = 'amd64' ] && ami_arch='x86_64'
 
-# The AMI has to start with "debian", otherwise we won't get a nice icon
-# The ":N:true:standard" is necessary so that the root volume
-# will be deleted on termination of the instance (specifically the "true" part)
 ami_name="$distribution-$codename-$arch-$name_suffix"
 log "Registering an AMI with the snapshot '$snapshot_id'"
 ami_id=`euca-register \
