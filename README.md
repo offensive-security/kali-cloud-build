@@ -9,7 +9,7 @@ The machine configuration this script creates has been thoroughly tested.
 
 * To create an AMI this bootstrapper needs to be run on an Amazon EC2 instance.
 * Generate your AWS Access and Secret keys - https://console.aws.amazon.com/iam/home?#security_credential
-* Create an Ubuntu 12.04 LTS, 64 bit default AMI. Log on to this machine and generate your Kali AMI.
+* Create an Ubuntu 14.04 LTS, 64 bit default AMI. Log on to this machine and generate your Kali AMI.
 <pre>
 $ cd ~
 $ sudo apt-get install git debootstrap

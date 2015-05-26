@@ -1,7 +1,7 @@
 #!/bin/bash
 # Create a snapshot of the EBS volume
 logn "Creating snapshot of the EBS volume"
-snapshot=`euca-create-snapshot $volume_id`
+snapshot=`euca-create-snapshot -d "kali-cloud-build" $volume_id`
 [ -z "$snapshot" ] && die "\nUnable to create snapshot from the volume '$volume_id'"
 snapshot_id=`printf -- "$snapshot" | awk '{print $2}'`
 
