@@ -2,7 +2,7 @@
 # Add some basic packages we are going to need
 
 # Apparently isc-dhcp-client doesn't work properly with ec2
-packages+=('dhcpcd')
+packages+=('dhcpcd5')
 
 # We use dhcpcd instead
 exclude_packages+=('isc-dhcp-client')
