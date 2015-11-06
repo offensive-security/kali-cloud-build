@@ -11,6 +11,6 @@ EOF
 done
 
 cat >> $imagedir/etc/apt/sources.list <<EOF
-deb http://security.kali.org/kali-security kali/updates main contrib non-free
-deb-src http://security.kali.org/kali-security kali/updates main contrib non-free
+deb http://security.kali.org/kali-security sana/updates main contrib non-free
+deb-src http://security.kali.org/kali-security sana/updates main contrib non-free
 EOF
