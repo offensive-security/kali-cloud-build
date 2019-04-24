@@ -1,7 +1,0 @@
-#!/bin/bash
-cat <<EOF > $BUILD_METADATA
-AMI_ID=$ami_id
-AMI_NAME=$ami_name
-SNAPSHOT_ID=$snapshot_id
-EOF
-log "AMI metadata recorded at $buildmetadata"

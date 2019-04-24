@@ -1,4 +1,0 @@
-#!/bin/bash
-remove_task $TASK_DELETE_VOLUME
-insert_task_after $TASK_CREATE_AMI \
-	$plugindir/remount-tasks/remount-volume

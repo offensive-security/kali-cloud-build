@@ -1,5 +1,0 @@
-packages+=('lvm2')
-packages+=('parted')
-
-host_packages+=('lvm2')
-

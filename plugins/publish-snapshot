@@ -1,3 +1,0 @@
-#!/bin/bash
-insert_task_after $TASK_SNAPSHOT \
-	$plugindir/publish-snapshot-tasks/grant-create-volume-permission

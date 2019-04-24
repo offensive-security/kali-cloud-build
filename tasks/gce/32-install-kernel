@@ -1,7 +1,0 @@
-#!/bin/bash
-# Google Compute Engine doesn't use Xen, so all working versions of Debian use
-# the 'linux-image-$flavor' package.
-[ $arch = 'amd64' ] && kernel_package='linux-image-amd64'
-[ $arch = 'i386' ] && kernel_package='linux-image-686'
-
-chroot $imagedir apt-get -y --no-install-recommends ${kernel_install_opts} install ${kernel_package}

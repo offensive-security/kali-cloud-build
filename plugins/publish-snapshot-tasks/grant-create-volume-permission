@@ -1,2 +1,0 @@
-#!/bin/bash
-$taskdir/euca-modify-snapshot-attribute --create-volume-permission --add all "$snapshot_id"

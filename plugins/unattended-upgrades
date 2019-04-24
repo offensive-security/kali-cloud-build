@@ -1,5 +1,0 @@
-#!/bin/bash
-insert_task_after $TASK_PACKAGES \
-	$plugindir/unattended-upgrades-tasks/add-unattended-upgrades-package
-insert_task_before $TASK_APT_SOURCES \
-	$plugindir/unattended-upgrades-tasks/create-02periodic

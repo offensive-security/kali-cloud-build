@@ -1,4 +1,0 @@
-#!/bin/bash
-# Detach the EBS volume
-euca-detach-volume $volume_id
-dotdot "euca-describe-volumes $volume_id | grep 'available'"

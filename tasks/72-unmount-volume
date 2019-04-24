@@ -1,9 +1,0 @@
-#!/bin/bash
-# Unmount the volume
-umount $imagedir
-
-# Delete the imagedir, it was unique to the volume
-rm -rf "$imagedir"
-
-# Lets cleanup code know the volume is unmounted.
-unset imagedir

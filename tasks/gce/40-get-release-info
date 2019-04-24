@@ -1,5 +1,0 @@
-#!/bin/bash
-
-lsb_release="$(chroot $imagedir lsb_release -r -s)"
-lsb_description="$(chroot $imagedir lsb_release -d -s)"
-major_version=${lsb_release%%.*}

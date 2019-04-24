@@ -1,7 +1,0 @@
-#! /bin/bash
-
-wget -O $imagedir/tmp/gsutil.tar.gz http://storage.googleapis.com/pub/gsutil.tar.gz
-
-mkdir -p $imagedir/usr/local/share/google
-tar xf $imagedir/tmp/gsutil.tar.gz -C $imagedir/usr/local/share/google
-ln -s ../share/google/gsutil/gsutil $imagedir/usr/local/bin/gsutil

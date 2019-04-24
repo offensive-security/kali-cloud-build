@@ -1,5 +1,0 @@
-#!/bin/bash
-insert_task_after $TASK_PACKAGES \
-	$plugindir/admin-user-tasks/add-sudo-package
-insert_task_after $TASK_INITSCRIPTS \
-	$plugindir/admin-user-tasks/create-user

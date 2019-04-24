@@ -1,4 +1,0 @@
-#!/bin/bash
-# Delete the EBS volume
-log "Deleting the volume"
-euca-delete-volume $volume_id

@@ -1,6 +1,0 @@
-#!/bin/bash
-# Create the compressed image file
-
-tarball_name="$distribution-$codename-$image_name_suffix.tar.gz"
-log "Creating $tarball_name."
-tar czSpf $workspace/$tarball_name -C $workspace disk.raw

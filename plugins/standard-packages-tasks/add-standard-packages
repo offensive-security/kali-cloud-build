@@ -1,6 +1,0 @@
-#!/bin/bash
-packages+=('lsb-release')
-packages+=('psmisc')
-packages+=('less')
-packages+=('vim')
-packages+=('emacs')

@@ -1,4 +1,0 @@
-#!/bin/bash
-# Kernel image installation, we need a special kernel flavor for xen
-[ $arch = 'amd64' ] && packages+=('linux-image-xen-amd64')
-[ $arch = 'i386' ] && packages+=('linux-image-xen-686')

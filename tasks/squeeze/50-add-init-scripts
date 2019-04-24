@@ -1,3 +1,0 @@
-#!/bin/bash
-# Add standard startup scripts to the init_scripts list
-init_scripts+=("$scriptdir/init.d/squeeze/generate-ssh-hostkeys")

@@ -1,4 +1,0 @@
-#!/bin/bash
-# Deactivate the VG before detaching
-
-vgchange -an vg_root

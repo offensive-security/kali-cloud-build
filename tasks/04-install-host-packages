@@ -1,5 +1,0 @@
-#!/bin/bash
-# Install packages on the host system to make the rest of this script run smoothly
-
-apt-get install -y ${host_packages[*]} | spin
-[ $PIPESTATUS == 0 ] || die "Installing host packages failed!"

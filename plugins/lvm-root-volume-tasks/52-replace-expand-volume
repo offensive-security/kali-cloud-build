@@ -1,5 +1,0 @@
-#!/bin/bash
-
-# Replace the standard ec2 expand-volume script
-
-cp "$scriptdir/plugins/lvm-root-volume-tasks/files/expand-lvm-volume" "$imagedir/etc/init.d/expand-volume"

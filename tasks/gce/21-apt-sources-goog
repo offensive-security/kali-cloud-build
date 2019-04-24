@@ -1,8 +1,0 @@
-#!/bin/bash
-# Basic sources.list. The current packages work on all supported versions of
-# Debian, so at least for now we're using a distribution name independent of
-# those. The repository is GPG signed, so temporarily import the key.
-wget -O - https://goog-repo.appspot.com/debian/key/public.gpg.key | chroot $imagedir apt-key add -
-cat > $imagedir/etc/apt/sources.list.d/goog.list <<EOF
-deb     http://goog-repo.appspot.com/debian pigeon main
-EOF

@@ -1,5 +1,0 @@
-#!/bin/bash
-# Add ec2 startup scripts to the init_scripts list
-init_scripts+=("$scriptdir/init.d/ec2-get-credentials")
-init_scripts+=("$scriptdir/init.d/ec2-run-user-data")
-init_scripts+=("$scriptdir/init.d/expand-volume")

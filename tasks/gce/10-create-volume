@@ -1,6 +1,0 @@
-#!/bin/bash
-# Create the GCE volume
-
-truncate $workspace/disk.raw --size="${volume_size}G"
-parted $workspace/disk.raw mklabel msdos
-parted $workspace/disk.raw mkpart primary 1MB '100%'

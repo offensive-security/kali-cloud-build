@@ -1,3 +1,0 @@
-#!/bin/bash
-insert_task_after $TASK_PACKAGES \
-	$plugindir/standard-packages-tasks/add-standard-packages

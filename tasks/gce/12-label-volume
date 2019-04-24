@@ -1,7 +1,0 @@
-#!/bin/bash
-# Label volume
-
-case $filesystem in
-	# Add a fs label
-	ext*) e2label $device_path / ;;
-esac
